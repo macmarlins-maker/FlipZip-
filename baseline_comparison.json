@@ -1,0 +1,58 @@
+{
+  "timestamp": "2026-01-17T15:44:06.849854",
+  "benchmarks": {
+    "sine_to_cosine": {
+      "length": 512,
+      "bps_gzip": 61.796875,
+      "bps_lzma": 60.0,
+      "bps_zstd": 61.640625,
+      "bps_flipzip": 10.62890625,
+      "improvement_vs_lzma_pct": 82.28515625
+    },
+    "frequency_switch": {
+      "length": 512,
+      "bps_gzip": 61.65625,
+      "bps_lzma": 60.0625,
+      "bps_zstd": 61.515625,
+      "bps_flipzip": 10.62890625,
+      "improvement_vs_lzma_pct": 82.30359001040583
+    },
+    "multi_regime": {
+      "length": 768,
+      "bps_gzip": 61.489583333333336,
+      "bps_lzma": 60.75,
+      "bps_zstd": 61.447916666666664,
+      "bps_flipzip": 10.587239583333334,
+      "improvement_vs_lzma_pct": 82.5724451303155
+    },
+    "long_signal": {
+      "length": 4096,
+      "bps_gzip": 61.109375,
+      "bps_lzma": 58.21875,
+      "bps_zstd": 60.998046875,
+      "bps_flipzip": 10.51953125,
+      "improvement_vs_lzma_pct": 81.93102522812667
+    },
+    "pure_noise": {
+      "length": 512,
+      "bps_gzip": 62.265625,
+      "bps_lzma": 62.4375,
+      "bps_zstd": 61.984375,
+      "bps_flipzip": 10.62890625,
+      "improvement_vs_lzma_pct": 82.97672672672672
+    },
+    "structured": {
+      "length": 512,
+      "bps_gzip": 61.53125,
+      "bps_lzma": 59.0625,
+      "bps_zstd": 61.328125,
+      "bps_flipzip": 10.62890625,
+      "improvement_vs_lzma_pct": 82.00396825396825
+    }
+  },
+  "summary": {
+    "avg_improvement_vs_lzma": 82.3454852665905,
+    "best_improvement": 82.97672672672672,
+    "worst_improvement": 81.93102522812667
+  }
+}

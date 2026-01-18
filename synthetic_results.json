@@ -1,0 +1,151 @@
+{
+  "config": {
+    "version": "1.0.0",
+    "random_seed": 42,
+    "window_size": 64,
+    "stride": 32,
+    "quantization_bits": 10,
+    "tau_func": "mad",
+    "n_null_permutations": 100
+  },
+  "timestamp": "2026-01-17T15:43:24.472960",
+  "tests": {
+    "sine_to_cosine": {
+      "detection": {
+        "detected": false,
+        "detection_error": null,
+        "closest_seam": null,
+        "n_seams_detected": 0,
+        "all_detected_seams": [],
+        "tau_at_transition": 0.125,
+        "tau_mean": 0.11979166666666667,
+        "tau_std": 0.012325166214790866,
+        "tau_min": 0.09375,
+        "tau_max": 0.140625
+      },
+      "null_95": 0.125,
+      "null_mean": 0.11703125,
+      "null_std": 0.010710820682258666,
+      "compression": {
+        "name": "sine_to_cosine",
+        "length": 512,
+        "flipzip_bps": 12.140625,
+        "flipzip_ratio": 5.271557271557271,
+        "raw_bps": 64.0,
+        "delta_variance_ratio": 0.016647517146340742
+      }
+    },
+    "frequency_switch": {
+      "detection": {
+        "detected": true,
+        "detection_error": 0,
+        "closest_seam": 256,
+        "n_seams_detected": 1,
+        "all_detected_seams": [
+          256
+        ],
+        "tau_at_transition": 0.125,
+        "tau_mean": 0.121875,
+        "tau_std": 0.03336586953759785,
+        "tau_min": 0.09375,
+        "tau_max": 0.234375
+      },
+      "null_95": 0.140625,
+      "null_mean": 0.11109375,
+      "null_std": 0.01305318896620669,
+      "compression": {
+        "name": "frequency_switch",
+        "length": 512,
+        "flipzip_bps": 12.140625,
+        "flipzip_ratio": 5.271557271557271,
+        "raw_bps": 64.0,
+        "delta_variance_ratio": 0.03017432102988271
+      }
+    },
+    "amplitude_switch": {
+      "detection": {
+        "detected": true,
+        "detection_error": 32,
+        "closest_seam": 288,
+        "n_seams_detected": 1,
+        "all_detected_seams": [
+          288
+        ],
+        "tau_at_transition": 0.125,
+        "tau_mean": 0.08854166666666667,
+        "tau_std": 0.03638385249286038,
+        "tau_min": 0.046875,
+        "tau_max": 0.140625
+      },
+      "null_95": 0.125,
+      "null_mean": 0.08296875,
+      "null_std": 0.035126376196349944,
+      "compression": {
+        "name": "amplitude_switch",
+        "length": 512,
+        "flipzip_bps": 12.140625,
+        "flipzip_ratio": 5.271557271557271,
+        "raw_bps": 64.0,
+        "delta_variance_ratio": 0.020968206784808548
+      }
+    },
+    "noise_switch": {
+      "detection": {
+        "detected": false,
+        "detection_error": null,
+        "closest_seam": null,
+        "n_seams_detected": 0,
+        "all_detected_seams": [],
+        "tau_at_transition": 0.015625,
+        "tau_mean": 0.0125,
+        "tau_std": 0.013010412496663331,
+        "tau_min": 0.0,
+        "tau_max": 0.03125
+      },
+      "null_95": 0.03125,
+      "null_mean": 0.01265625,
+      "null_std": 0.0133856193240171,
+      "compression": {
+        "name": "noise_switch",
+        "length": 512,
+        "flipzip_bps": 12.140625,
+        "flipzip_ratio": 5.271557271557271,
+        "raw_bps": 64.0,
+        "delta_variance_ratio": 1.9586270742889953
+      }
+    },
+    "step_function": {
+      "detection": {
+        "detected": true,
+        "detection_error": 0,
+        "closest_seam": 256,
+        "n_seams_detected": 1,
+        "all_detected_seams": [
+          256
+        ],
+        "tau_at_transition": 0.015625,
+        "tau_mean": 0.023958333333333335,
+        "tau_std": 0.012586506222494347,
+        "tau_min": 0.015625,
+        "tau_max": 0.0625
+      },
+      "null_95": 0.03125,
+      "null_mean": 0.02015625,
+      "null_std": 0.007090032065336517,
+      "compression": {
+        "name": "step_function",
+        "length": 512,
+        "flipzip_bps": 12.140625,
+        "flipzip_ratio": 5.271557271557271,
+        "raw_bps": 64.0,
+        "delta_variance_ratio": 0.08455239019425911
+      }
+    }
+  },
+  "summary": {
+    "detection_accuracy": 0.6,
+    "detection_successes": 3,
+    "total_tests": 5,
+    "average_compression_ratio": 5.271557271557271
+  }
+}

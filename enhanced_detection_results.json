@@ -1,0 +1,290 @@
+{
+  "timestamp": "2026-01-17T21:11:21.092467",
+  "pywt_available": true,
+  "tests": {
+    "ecg_like": {
+      "n_samples": 10800,
+      "true_points": [
+        3600,
+        7200
+      ],
+      "tolerance": 540,
+      "auto_selected": "wavelet",
+      "methods": {
+        "tau": {
+          "seams": [
+            512,
+            896,
+            1408,
+            1792,
+            2560,
+            2944,
+            3456,
+            3968,
+            4352,
+            5248,
+            5760,
+            6400,
+            6784,
+            7296,
+            8064,
+            8960,
+            9984,
+            10368
+          ],
+          "evaluation": {
+            "precision": 0.1111111111111111,
+            "recall": 1.0,
+            "f1": 0.19999999999999998,
+            "tp": 2
+          }
+        },
+        "period": {
+          "seams": [
+            8896
+          ],
+          "evaluation": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0,
+            "tp": 0
+          }
+        },
+        "wavelet": {
+          "seams": [
+            1092,
+            1945,
+            2885,
+            3599,
+            4822,
+            5643,
+            7198,
+            8160,
+            10497
+          ],
+          "evaluation": {
+            "precision": 0.2222222222222222,
+            "recall": 1.0,
+            "f1": 0.3636363636363636,
+            "tp": 2
+          }
+        },
+        "adaptive": {
+          "seams": [
+            994,
+            1868,
+            2914,
+            3527,
+            5701,
+            7247,
+            8112,
+            8928,
+            10432
+          ],
+          "evaluation": {
+            "precision": 0.2222222222222222,
+            "recall": 1.0,
+            "f1": 0.3636363636363636,
+            "tp": 2
+          }
+        }
+      }
+    },
+    "frequency_switch": {
+      "n_samples": 2000,
+      "true_points": [
+        666,
+        1332
+      ],
+      "tolerance": 100,
+      "auto_selected": "period",
+      "methods": {
+        "tau": {
+          "seams": [
+            256,
+            640,
+            1024,
+            1536
+          ],
+          "evaluation": {
+            "precision": 0.25,
+            "recall": 0.5,
+            "f1": 0.3333333333333333,
+            "tp": 1
+          }
+        },
+        "period": {
+          "seams": [
+            640
+          ],
+          "evaluation": {
+            "precision": 1.0,
+            "recall": 0.5,
+            "f1": 0.6666666666666666,
+            "tp": 1
+          }
+        },
+        "wavelet": {
+          "seams": [
+            74,
+            284,
+            543,
+            653,
+            666,
+            706,
+            1059,
+            1099,
+            1231,
+            1422,
+            1951
+          ],
+          "evaluation": {
+            "precision": 0.18181818181818182,
+            "recall": 1.0,
+            "f1": 0.3076923076923077,
+            "tp": 2
+          }
+        },
+        "adaptive": {
+          "seams": [
+            256,
+            646,
+            1165
+          ],
+          "evaluation": {
+            "precision": 0.3333333333333333,
+            "recall": 0.5,
+            "f1": 0.4,
+            "tp": 1
+          }
+        }
+      }
+    },
+    "amplitude_switch": {
+      "n_samples": 2000,
+      "true_points": [
+        666,
+        1332
+      ],
+      "tolerance": 100,
+      "auto_selected": "period",
+      "methods": {
+        "tau": {
+          "seams": [
+            384,
+            768,
+            1280,
+            1664
+          ],
+          "evaluation": {
+            "precision": 0.25,
+            "recall": 0.5,
+            "f1": 0.3333333333333333,
+            "tp": 1
+          }
+        },
+        "period": {
+          "seams": [
+            1344
+          ],
+          "evaluation": {
+            "precision": 1.0,
+            "recall": 0.5,
+            "f1": 0.6666666666666666,
+            "tp": 1
+          }
+        },
+        "wavelet": {
+          "seams": [
+            74,
+            284,
+            543,
+            653,
+            666,
+            706,
+            1059,
+            1099,
+            1231,
+            1422,
+            1951
+          ],
+          "evaluation": {
+            "precision": 0.18181818181818182,
+            "recall": 1.0,
+            "f1": 0.3076923076923077,
+            "tp": 2
+          }
+        },
+        "adaptive": {
+          "seams": [
+            598,
+            1280
+          ],
+          "evaluation": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "tp": 2
+          }
+        }
+      }
+    },
+    "piecewise_constant": {
+      "n_samples": 1000,
+      "true_points": [
+        250,
+        500,
+        750
+      ],
+      "tolerance": 50,
+      "auto_selected": "wavelet",
+      "methods": {
+        "tau": {
+          "seams": [
+            192,
+            448,
+            704
+          ],
+          "evaluation": {
+            "precision": 0.3333333333333333,
+            "recall": 0.3333333333333333,
+            "f1": 0.3333333333333333,
+            "tp": 1
+          }
+        },
+        "period": {
+          "seams": [],
+          "evaluation": {
+            "precision": 0.0,
+            "recall": 0.0,
+            "f1": 0.0
+          }
+        },
+        "wavelet": {
+          "seams": [
+            249,
+            498,
+            747
+          ],
+          "evaluation": {
+            "precision": 1.0,
+            "recall": 1.0,
+            "f1": 1.0,
+            "tp": 3
+          }
+        },
+        "adaptive": {
+          "seams": [
+            473
+          ],
+          "evaluation": {
+            "precision": 1.0,
+            "recall": 0.3333333333333333,
+            "f1": 0.5,
+            "tp": 1
+          }
+        }
+      }
+    }
+  }
+}

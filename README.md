@@ -66,16 +66,15 @@ Results are saved to JSON files for reproducibility.
 
 ### Detection Method Comparison (January 2026)
 
-|Signal Type           |Tau (WHT)|Period  |Wavelet |Adaptive|
-|----------------------|---------|--------|--------|--------|
-|ECG-like (rate change)|0.20     |0.00    |**0.36**|0.36    |
-|Frequency modulation  |0.33     |**0.67**|0.31    |0.40    |
-|Amplitude change      |0.33     |0.67    |0.31    |**1.00**|
-|Piecewise constant    |0.33     |0.00    |**1.00**|0.50    |
-|**Average F1**        |0.30     |0.33    |0.49    |**0.57**|
+| Signal Type | Tau (WHT) | Period | Wavelet | Adaptive |
+|-------------|-----------|--------|---------|----------|
+| ECG-like (rate change) | 0.20 | 0.00 | **0.36** | 0.36 |
+| Frequency modulation | 0.33 | **0.67** | 0.31 | 0.40 |
+| Amplitude change | 0.33 | 0.67 | 0.31 | **1.00** |
+| Piecewise constant | 0.33 | 0.00 | **1.00** | 0.50 |
+| **Average F1** | 0.30 | 0.33 | 0.49 | **0.57** |
 
 **Key findings:**
-
 - **Adaptive method** (combining tau + wavelet) achieves best overall performance
 - **Wavelet detail** is best for abrupt changes (piecewise constant)
 - **Period tracking** is best for pure frequency modulation
@@ -83,12 +82,12 @@ Results are saved to JSON files for reproducibility.
 
 ### Compression Benchmark (Fair comparison at 10-bit quantization)
 
-|Signal Type                        |FlipZip vs LZMA   |
-|-----------------------------------|------------------|
-|Regime-switching (freq/amp changes)|**+5-7%** (better)|
-|White noise                        |**+17%** (better) |
-|Pure sine                          |-10% (worse)      |
-|Random walk                        |-18% (worse)      |
+| Signal Type | FlipZip vs LZMA |
+|-------------|-----------------|
+| Regime-switching (freq/amp changes) | **+5-7%** (better) |
+| White noise | **+17%** (better) |
+| Pure sine | -10% (worse) |
+| Random walk | -18% (worse) |
 
 **Honest assessment:** FlipZip with enhanced detection shows promise for regime-switching use cases. The adaptive detector significantly improves seam detection accuracy compared to WHT-only approaches.
 
@@ -117,11 +116,10 @@ A seam (regime transition) is detected when τ exhibits a significant jump betwe
 ### Compression
 
 FlipZip encodes signals window-by-window:
-
 1. Apply WHT to each window
-1. Quantize coefficients
-1. Track involution state (which basis subset is active)
-1. Emit regime-switch flags when seams are detected
+2. Quantize coefficients
+3. Track involution state (which basis subset is active)
+4. Emit regime-switch flags when seams are detected
 
 ## Project Status
 
@@ -150,7 +148,7 @@ If you use FlipZip in your research, please cite:
 
 ## License
 
-MIT License. See <LICENSE> for details.
+MIT License. See [LICENSE](LICENSE) for details.
 
 ## Author
 
@@ -161,7 +159,6 @@ Independent Researcher
 ## Acknowledgments
 
 This work builds on concepts from:
-
 - Walsh-Hadamard Transform theory (Beauchamp, 1984)
 - Arithmetic coding (Witten, Moffat & Bell, 1999)
 - The M³ framework for topological signal analysis
